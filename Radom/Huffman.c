@@ -11,8 +11,6 @@ typedef struct Node {
 } Node;
 
 
-/* Liefert ein dynamisches Array von Node (Blätter) zurück
-   und schreibt die Anzahl in *out_unique_count. */
 Node* counting(const char* word, int* out_unique_count) {
     int word_length = (int)strlen(word);
 
@@ -57,8 +55,7 @@ Node* counting(const char* word, int* out_unique_count) {
     return ptr;
 }
 
-/* Sortiert ein NULL-terminiertes Array von Node* nach count (aufsteigend). 
-   Gibt das gleiche Array zurück (Bequemlichkeit). */
+
 Node** Huffman_order(Node **arr) {
     if (!arr) return NULL;
 
@@ -78,8 +75,7 @@ Node** Huffman_order(Node **arr) {
     return arr;
 }
 
-/* Baut aus einem NULL-terminierten Array von Node* den Huffman-Baum
-   und liefert die Wurzel zurück. */
+
 Node* Huffman_tree(Node **arr){
     if (!arr) return NULL;
 
