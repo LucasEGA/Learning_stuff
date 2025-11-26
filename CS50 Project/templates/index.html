@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}Chatify{% endblock %}
+
+{% block content %}
+  <!-- CHANGED: added wrapper and classes for centered, symmetric layout -->
+<div class="app-card app-row">   <!-- NEU: app-row -->
+
+  <!-- TEXT LINKS -->
+  <div class="text-side">
+    <h1 class="page-title">Chatify</h1>
+    <p class="page-subtitle">Have chats with your friends</p>
+  </div>
+
+  <!-- BILD RECHTS -->
+  <img class="image-side" src="{{ url_for('static', filename='Photo_.png') }}" alt="Chat Image">
+
+</div>
+{% endblock %}
