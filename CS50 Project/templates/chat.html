@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}Chat{% endblock %}
+
+{% block content %}
+
+<h1 class="chat-title">Chat</h1>
+
+<!-- OPEN CHAT FORM -->
+<form method="get" action="{{ url_for('chat') }}" class="chat-select-form">
+  <label for="name">Chat with:</label>
+  <div class="input-row">
+    <input id="name" name="name" type="text" value="{{ partner_name or '' }}" placeholder="username" required>
+    <button type="submit">Open</button>
+  </div>
+</form>
+
+{% if partner_name %}
+  <h2 class="chat-subtitle">Conversation with {{ partner_name }}</h2>
+
+  <!-- MESSAGES -->
+  <section class="messages">
+    {% for m in messages %}
+      <div class="msg {{ 'me' if m['sender'] == me_username else 'them' }}">
+        <strong>{{ m['sender'] }}</strong>
+        <p>{{ m['body']|e }}</p>
+        <small>{{ m['created_at'] }}</small>
+      </div>
+    {% else %}
+      <p>No messages yet. Say hi!</p>
+    {% endfor %}
+  </section>
+
+  <!-- SEND MESSAGE -->
+  <form method="post" action="{{ url_for('chat') }}" class="chat-send-form">
+    <input type="hidden" name="name" value="{{ partner_name }}">
+    <textarea name="text" rows="3" placeholder="Type your message…" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+
+{% endif %}
+{% endblock %}
