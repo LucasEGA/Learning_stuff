@@ -43,11 +43,11 @@ Overall, the system demonstrates architectural planning that goes beyond any pre
 ---
 
 📁 Project Structure
-app.py
-data.db
-/static/
+- app.py
+- data.db
+- /static/
     stylesheet.css
-/templates/
+- /templates/
     layout.html
     chat.html
     login.html
