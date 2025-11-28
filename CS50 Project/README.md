@@ -1,8 +1,7 @@
 # Chatify — CS50 Final Project
 
 ### Video Demo  
-https://youtu.be/__________________
-
+https://www.youtube.com/watch?v=5-y4eGgMo6Q
 ---
 
 ## Description
