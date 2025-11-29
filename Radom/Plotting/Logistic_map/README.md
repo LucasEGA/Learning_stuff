@@ -50,4 +50,4 @@ can arise from a very simple equation. It is relevant in:
 - chaos theory
 - cryptography
 
-(Text was writte with AI, just in case I want I am interested)
+(Text was writte with AI, just in case I am interested)
